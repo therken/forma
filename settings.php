@@ -27,9 +27,9 @@ $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, den
 VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$file_name')";
 
 if(mysqli_query($conn, $sql)){
-  echo "<h3>data stored in a database successfully.</h3>";  
+  echo "<h3>Информация добавлена.</h3>";  
 } else{
-  echo "ERROR: Hush! Sorry $sql. "
+  echo "Ошибка $sql. "
       . mysqli_error($conn);
 }
 
