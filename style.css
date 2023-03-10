@@ -85,21 +85,3 @@ textarea{
   height: 40px;
   margin-top: 2%;
 }
-
-img{
-width: 105%;
-  padding: 5px;
-  height: 200px;
-}
-
-textarea {
-background: #7a288100;
-width: 100%;
-padding: 5px;
-height: 30px;
-border-radius: 0px;
-margin: 5px 0;
-outline: none;
-color: #ffffff;
-border:2px solid #22272d ;
-}
