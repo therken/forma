@@ -2,7 +2,7 @@
 $host= 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'forma';
+$db = 'form';
   
 $conn = mysqli_connect($host , $user , $pass , $db);
 // Check connection
@@ -19,13 +19,32 @@ $about = mysqli_real_escape_string($conn,$_POST['about']);
 $edate=strtotime($_POST['date']); 
 $edate=date("Y-m-d",$edate);
 
-$folder ="./uploads/";
-$file_ext =  strtolower(strrchr($_FILES['image']['name'],'.'));
-$file_name = "file".uniqid(rand(10000,99999));
-move_uploaded_file($tmp_name, "$uploads_dir/$name")
-$uploadedFile  = $folder.$file_name.$file_ext;
+
+
+$uploaddir = 'uploads/';
+$uploadfile = $uploaddir . basename($_FILES['image']['name']);
+
+if(!is_uploaded_file($_FILES['image']['tmp_name']))  
+{
+     echo "Загрузка файла на сервер не удалась";
+     die(); //or throw exception...
+} 
+
+//Проверка что это картинка
+
+if (!getimagesize($_FILES["image"]["tmp_name"])) {
+     echo "Это не картинка...";
+     die(); //or throw exception...
+}
+
+if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
+    echo "Файл корректен и был успешно загружен.\n";
+} else {
+    echo "Возможная атака с помощью файловой загрузки!\n";
+}
+
 $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
-VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$file_name')";
+VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$uploadfile')";
 
 if(mysqli_query($conn, $sql)){
   echo "<h3>Информация добавлена.</h3>";  
