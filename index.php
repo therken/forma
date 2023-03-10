@@ -21,18 +21,17 @@
  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
 </head>
 <body>
-		<form action="settings.php" method="POST" >
+		<form action="settings.php" method="POST" enctype="multipart/form-data" >
             <div class="wrapper">
-<!-- partial:index.partial.html -->
+              <!--image-->
 <div class="avatar-wrapper">
 	<img class="profile-pic" src="" />
 	<div class="upload-button">
 		<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 	</div>
-	<input class="file-upload" type="file" accept="image/*"/>
+	<input class="file-upload" type="file" accept="image/*" name="image"/>
 </div>
-
-<!-- partial -->
+<!--1-->
   <input type="text" class="form-control input-xs" name="name" placeholder="Имя">
   <!--2-->
     <input type="text" class="form-control input-xs"  name="secondname" placeholder="Фамилия">
