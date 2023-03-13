@@ -50,7 +50,7 @@ $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, den
 VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$uploadfile')";
 
 if(mysqli_query($conn, $sql)){
-  echo "<center><h3>Информация добавлена.</h3></center>";  
+  echo "<center>Информация добавлена</center>";  
 } else{
   echo "Ошибка $sql. "
       . mysqli_error($conn);
