@@ -61,7 +61,8 @@ body {
  }
  .wrapper {
   width: 300px;
-
+margin-left: 40%;
+margin-top: 10%;
 }
 
 input {
