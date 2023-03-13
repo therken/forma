@@ -8,6 +8,7 @@
   box-shadow: 1px 1px 15px -5px black;
   transition: all 0.3s ease;
   margin-left: 17%;
+border: 2px solid #22272d;
 }
 .avatar-wrapper:hover {
   transform: scale(1.05);
@@ -56,7 +57,7 @@
 }
 
 body {
-  background-color:#1a1f25;
+  background-color:#000000;
   font-family: 'Roboto', sans-serif;
  }
  .wrapper {
