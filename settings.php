@@ -22,32 +22,35 @@ $edate=date("Y-m-d",$edate);
 
 
 $uploaddir = 'uploads/';
+$tempFilePath = $_FILES['image']['tmp_name']; 
+  $fileName = $_FILES['image']['name']; 
 $uploadfile = $uploaddir . basename($_FILES['image']['name']);
+$uploadFile = $uploaddir . uniqid() . '-' . basename($fileName); 
 
 if(!is_uploaded_file($_FILES['image']['tmp_name']))  
 {
-     echo "Загрузка файла на сервер не удалась";
+     echo "<center>Загрузка файла на сервер не удалась</center>";
      die(); //or throw exception...
 } 
 
 //Проверка что это картинка
 
 if (!getimagesize($_FILES["image"]["tmp_name"])) {
-     echo "Это не картинка...";
+     echo "<center>Это не картинка...</center>";
      die(); //or throw exception...
 }
 
-if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-    echo "Файл корректен и был успешно загружен.\n";
+if (move_uploaded_file($tempFilePath, $uploadFile)) {
+    echo "<center>Файл корректен и был успешно загружен.\n</center>";
 } else {
-    echo "Возможная атака с помощью файловой загрузки!\n";
+    echo "<center>Возможная атака с помощью файловой загрузки!\n</center>";
 }
 
 $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
 VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$uploadfile')";
 
 if(mysqli_query($conn, $sql)){
-  echo "<h3>Информация добавлена.</h3>";  
+  echo "<center><h3>Информация добавлена.</h3></center>";  
 } else{
   echo "Ошибка $sql. "
       . mysqli_error($conn);
