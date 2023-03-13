@@ -25,7 +25,7 @@
             <div class="wrapper">
               <!--image-->
 <div class="avatar-wrapper">
-	<img class="profile-pic" src="" />
+	<img class="profile-pic" src="5034901-200.png" />
 	<div class="upload-button">
 		<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 	</div>
@@ -43,7 +43,7 @@
 	  <!--6-->
 	<textarea maxlength = "1000" name="about" placeholder="о себе"></textarea>
 	<input type='date' name="date" class="form-control" data-provide="datepicker" placeholder='Select Date' style='width: 300px;' > <br>
-  <input type="submit" placeholder="Отправить">
+  <input type="submit" placeholder="Отправить" value="Сохранить">
  </div> 
 </form>
 </body>
