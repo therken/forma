@@ -64,7 +64,9 @@ body {
 margin-left: 40%;
 margin-top: 10%;
 }
-
+input:focus {
+  outline:none;
+  }
 input {
   background: transparent;
   background-color: #e6cb3300;
@@ -74,7 +76,6 @@ input {
   padding: 5px;
   height: 20px;
   margin-top: 2%;
-    outline: none;
 }
 input[type="submit"] {
   background: transparent;
@@ -85,7 +86,6 @@ input[type="submit"] {
   padding: 5px;
   height: 40px;
   margin-top: 2%;
-  outline: none;
 }
 textarea{
   background: transparent;
@@ -96,5 +96,4 @@ textarea{
   padding: 5px;
   height: 30px;
   margin-top: 2%;
-  outline: none;
 }
