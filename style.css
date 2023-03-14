@@ -23,7 +23,6 @@ border: 2px solid #22272d;
   transition: all 0.3s ease;
 }
 .avatar-wrapper .profile-pic:after {
-  font-family: FontAwesome;
   content: "";
   top: 0;
   left: 0;
@@ -42,7 +41,7 @@ border: 2px solid #22272d;
   height: 100%;
   width: 100%;
 }
-.avatar-wrapper .upload-button .fa-arrow-circle-up {
+.avatar-wrapper .upload-button {
   position: absolute;
   font-size: 234px;
   top: -17px;
@@ -52,7 +51,7 @@ border: 2px solid #22272d;
   transition: all 0.3s ease;
   color: #34495e;
 }
-.avatar-wrapper .upload-button:hover .fa-arrow-circle-up {
+.avatar-wrapper .upload-button:hover  {
   opacity: 0.9;
 }
 
