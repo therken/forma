@@ -24,7 +24,6 @@ $edate=date("Y-m-d",$edate);
 $uploaddir = 'uploads/';
 $tempFilePath = $_FILES['image']['tmp_name']; 
   $fileName = $_FILES['image']['name']; 
-$uploadfile = $uploaddir . basename($_FILES['image']['name']);
 $uploadFile = $uploaddir . uniqid() . '-' . basename($fileName); 
 
 if(!is_uploaded_file($_FILES['image']['tmp_name']))  
@@ -45,12 +44,12 @@ if (move_uploaded_file($tempFilePath, $uploadFile)) {
 } else {
     echo "<center>Возможная атака с помощью файловой загрузки!\n</center>";
 }
-
+$photo_link = "http://localhost/" . $uploadFile; 
 $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
-VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$uploadfile')";
+VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
 
 if(mysqli_query($conn, $sql)){
-  echo "<center>Информация добавлена</center>";  
+  echo "<center><h3>Информация добавлена.</h3></center>";  
 } else{
   echo "Ошибка $sql. "
       . mysqli_error($conn);
