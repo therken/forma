@@ -44,7 +44,7 @@ if (move_uploaded_file($tempFilePath, $uploadFile)) {
 } else {
     echo "<center>Возможная атака с помощью файловой загрузки!\n</center>";
 }
-$photo_link = "http://localhost/" . $uploadFile; 
+$photo_link = $uploadFile; 
 $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
 VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
 
