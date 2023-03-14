@@ -31,7 +31,7 @@ if (($edate >= $startDate) && ($edate <= $endDate)) {
 
 } else {
 
-    echo "<center>Введите правильную дату</center>"; 
+    echo "<center>некорректная дата</center>"; 
     die(); 
 }
 $uploaddir = 'uploads/';
