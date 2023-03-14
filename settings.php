@@ -2,7 +2,7 @@
 $host= 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'form';
+$db = 'forma';
   
 $conn = mysqli_connect($host , $user , $pass , $db);
 // Check connection
@@ -17,10 +17,23 @@ $last = mysqli_real_escape_string($conn,$_POST['lastname']);
 $mail = mysqli_real_escape_string($conn,$_POST['mail']);
 $about = mysqli_real_escape_string($conn,$_POST['about']);
 $edate=strtotime($_POST['date']); 
+$curdate=strtotime('22-02-2011');
 $edate=date("Y-m-d",$edate);
 
 
+$startDate = date('Y-m-d', strtotime("01/01/1900"));
 
+$endDate = date('Y-m-d', strtotime("01/10/2024"));
+
+if (($edate >= $startDate) && ($edate <= $endDate)) {
+
+    echo "";
+
+} else {
+
+    echo "<center>Введите правильную дату</center>"; 
+    die(); 
+}
 $uploaddir = 'uploads/';
 $tempFilePath = $_FILES['image']['tmp_name']; 
   $fileName = $_FILES['image']['name']; 
@@ -49,7 +62,7 @@ $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, den
 VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
 
 if(mysqli_query($conn, $sql)){
-  echo "<center><h3>Информация добавлена.</h3></center>";  
+  echo "<center>Информация добавлена.</center>";  
 } else{
   echo "Ошибка $sql. "
       . mysqli_error($conn);
