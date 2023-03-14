@@ -25,9 +25,8 @@
             <div class="wrapper">
               <!--image-->
 <div class="avatar-wrapper">
-	<img class="profile-pic" src="5034901-200.png" />
+	<img class="profile-pic" src="def.jpg" />
 	<div class="upload-button">
-		<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 	</div>
 	<input class="file-upload" type="file" accept="image/*" name="image"/>
 </div>
