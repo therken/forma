@@ -5,19 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <title>trytodie</title>
-  
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
- <!-- jQuery -->
- <script src="jquery-3.1.1.min.js" type='text/javascript'></script>
-
- <!-- Bootstrap -->
- <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
- <script src='bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
-
- <!-- Datepicker -->
  <link href='bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
- <script src='bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
 </head>
 <body>
