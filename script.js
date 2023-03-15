@@ -20,3 +20,22 @@ $(document).ready(function() {
        $(".file-upload").click();
     });
 });
+$(document).ready(function(){
+    $('form').submit(function(event){
+        event.preventDefault();
+        $.ajax({
+            url: 'settings.php',
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function(response){
+                alert(response);
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                alert('Произошла ошибка: ' + errorThrown);
+            },
+            complete: function() {
+                // Код, выполняющийся после завершения AJAX-запроса
+            }
+        });
+    });
+});
