@@ -10,7 +10,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
 </head>
 <body>
-<form action="settings.php" method="POST" enctype="multipart/form-data" >
+<form action="profile.php" method="POST" enctype="multipart/form-data" >
             <div class="wrapper">
               <!--image-->
 <div class="avatar-wrapper">
