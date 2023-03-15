@@ -25,14 +25,14 @@ $sql = "SELECT mail FROM user_form WHERE mail='$mail'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 $errorMessage = "Этот email уже используется";
-echo "<script>alert('$errorMessage');</script>";
+echo "$errorMessage";
 } else {
   ///проверка даты
 if (($edate >= $startDate) && ($edate <= $endDate)) {
   echo "";
 } else {
   $errorMessage = "некорректная дата";
-  echo "<script>alert('$errorMessage');</script>"; 
+  echo "$errorMessage"; 
 
 }
 ///загрузка файла 
@@ -43,21 +43,21 @@ $uploadFile = $uploaddir . uniqid() . '-' . basename($fileName);
 
 if(!is_uploaded_file($_FILES['image']['tmp_name'])) {
      $errorMessage = "Выберите изображение";
-     echo "<script>alert('$errorMessage');</script>";
+     echo "$errorMessage";
 } 
 
 //Проверка что это картинка
 if (!getimagesize($_FILES["image"]["tmp_name"])) {
      $errorMessage = "Это не картинка...";
-     echo "<script>alert('$errorMessage');</script>";
+     echo "$errorMessage";
 }
 
 if (move_uploaded_file($tempFilePath, $uploadFile)) {
     $successMessage = "Файл корректен и был успешно загружен.";
-    echo "<script>alert('$successMessage');</script>";
+    echo "$successMessage";
 } else {
     $errorMessage = "Возможная атака с помощью файловой загрузки!";
-    echo "<script>alert('$errorMessage');</script>";
+    echo "'$errorMessage";
 }
 $photo_link = $uploadFile; 
 ///добавление значений в бд
@@ -66,11 +66,11 @@ $photo_link = $uploadFile;
   ///вывод сообщения о том что данные добавлены
   if(mysqli_query($conn, $sql)){
     $successMessage= "Информация добавлена.";  
-    echo "<script>alert('$successMessage');</script>";
+    echo "$successMessage";
   } else{
     $errorMessage= "Ошибка $sql. "
         . mysqli_error($conn);
-        echo "<script>alert('$errormeMessage');</script>";
+        echo "$errormeMessage";
   }
 }
 mysqli_close($conn);
