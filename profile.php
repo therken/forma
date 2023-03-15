@@ -6,7 +6,7 @@ $db = 'form';
 $conn = mysqli_connect($host , $user , $pass , $db);
 // Check connection
 if($conn === false){
-  die("ERROR: Could not connect. "
+  die("ERROR: Невозможно подключиться. "
       . mysqli_connect_error());
 }
 ///переменные
