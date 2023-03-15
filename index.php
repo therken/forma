@@ -11,13 +11,13 @@
 </head>
 <body>
 <form action="profile.php" method="POST" enctype="multipart/form-data" >
-            <div class="wrapper">
-              <!--image-->
+<div class="wrapper">
+<!--image-->
 <div class="avatar-wrapper">
-	<img class="profile-pic" src="def.jpg" />
-	<div class="upload-button">
-	</div>
-	<input class="file-upload" type="file" accept="image/*" name="image"/>
+<img class="profile-pic" src="def.jpg" />
+<div class="upload-button">
+</div>
+<input class="file-upload" type="file" accept="image/*" name="image"/>
 </div>
 <!--1-->
 <input type="text" class="form-control input-xs" name="name" placeholder="Имя">
