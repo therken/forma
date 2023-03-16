@@ -23,18 +23,18 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('form').submit(function(event){
         event.preventDefault();
+        var formData = new FormData($('form')[0]);
         $.ajax({
             url: 'settings.php',
             type: 'POST',
-            data: $('form').serialize(),
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
             success: function(response){
                 alert(response);
             },
-            error: function(jqXHR, textStatus, errorThrown){
-                alert('Произошла ошибка: ' + errorThrown);
-            },
             complete: function() {
-                // Код, выполняющийся после завершения AJAX-запроса
             }
         });
     });
