@@ -76,8 +76,9 @@ input {
   color: #ffffff;
   width: 100%;
   padding: 5px;
-  height: 20px;
+  height: 30px;
   margin-top: 2%;
+  border-radius: 10px;
 }
 input[type="submit"] {
   background: transparent;
@@ -88,6 +89,7 @@ input[type="submit"] {
   padding: 5px;
   height: 40px;
   margin-top: 2%;
+  border-radius: 10px;
 }
 textarea{
   background: transparent;
@@ -101,4 +103,5 @@ textarea{
   resize: none;
   overflow: hidden;
   min-height: 50px;
+  border-radius: 10px;
 }
