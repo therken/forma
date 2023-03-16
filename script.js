@@ -25,7 +25,7 @@ $(document).ready(function(){
         event.preventDefault();
         var formData = new FormData($('form')[0]);
         $.ajax({
-            url: 'settings.php',
+            url: 'profile.php',
             type: 'POST',
             data: formData,
             cache: false,
@@ -39,3 +39,5 @@ $(document).ready(function(){
         });
     });
 });
+
+ 
