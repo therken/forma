@@ -1,14 +1,14 @@
 @charset "UTF-8";
 .avatar-wrapper {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 1px 1px 15px -5px black;
   transition: all 0.3s ease;
-  margin-left: 17%;
-border: 2px solid #22272d;
+  margin-left: 10%;
+  border: 2px solid #22272d;
 }
 .avatar-wrapper:hover {
   transform: scale(1.05);
@@ -20,6 +20,7 @@ border: 2px solid #22272d;
 .avatar-wrapper .profile-pic {
   height: 100%;
   width: 100%;
+  object-fit: cover;
   transition: all 0.3s ease;
 }
 .avatar-wrapper .profile-pic:after {
@@ -56,7 +57,7 @@ border: 2px solid #22272d;
 }
 
 body {
-  background-color:#000000;
+  background-color:#1b1919;
   font-family: 'Roboto', sans-serif;
   
  }
