@@ -44,12 +44,14 @@ $uploadFile = $uploaddir . uniqid() . '-' . basename($fileName);
 if(!is_uploaded_file($_FILES['image']['tmp_name'])) {
      $errorMessage = "Выберите изображение";
      echo "$errorMessage";
+     die();
 } 
 
 //Проверка что это картинка
 if (!getimagesize($_FILES["image"]["tmp_name"])) {
      $errorMessage = "Это не картинка...";
      echo "$errorMessage";
+     die();
 }
 
 if (move_uploaded_file($tempFilePath, $uploadFile)) {
