@@ -7,7 +7,7 @@
   overflow: hidden;
   box-shadow: 1px 1px 15px -5px black;
   transition: all 0.3s ease;
-  margin-left: 10%;
+  margin-left: 7%;
   border: 2px solid #22272d;
 }
 .avatar-wrapper:hover {
