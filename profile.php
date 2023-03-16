@@ -33,7 +33,7 @@ if (($edate >= $startDate) && ($edate <= $endDate)) {
 } else {
   $errorMessage = "некорректная дата";
   echo "$errorMessage"; 
-
+die();
 }
 ///загрузка файла 
 $uploaddir = 'uploads/';
