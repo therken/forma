@@ -63,7 +63,7 @@ if (move_uploaded_file($tempFilePath, $uploadFile)) {
 }
 $photo_link = $uploadFile; 
 ///добавление значений в бд
-  $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, dendata,img)
+  $sql = "INSERT INTO user_form (firstname, secondname, lastname, mail, about, date,img)
   VALUES ('$name', '$sec', '$last', '$mail', '$about', '$edate','$photo_link')";
   ///вывод сообщения о том что данные добавлены
   if(mysqli_query($conn, $sql)){
