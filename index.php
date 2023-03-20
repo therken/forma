@@ -15,7 +15,7 @@
 <div class="wrapper">
 <!--image-->
 <div class="avatar-wrapper">
-<img class="profile-pic" src="def.jpg" />
+<img class="profile-pic" src="https://preview.redd.it/imrpoved-steam-default-avatar-v0-ffxjnceu7vf81.png?width=640&crop=smart&auto=webp&s=0f8cbc4130a94fc83f19418f1a734209108c2a4b" />
 <div class="upload-button">
 </div>
 <input class="file-upload" type="file" accept="image/*" name="image"/>
