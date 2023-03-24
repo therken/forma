@@ -1,14 +1,5 @@
 <?php
-$host= 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'form'; 
-$conn = mysqli_connect($host , $user , $pass , $db);
-// Check connection
-if($conn === false){
-  die("ERROR: Невозможно подключиться. "
-      . mysqli_connect_error());
-}
+include 'settings.php';
 ///переменные
 $name = mysqli_real_escape_string($conn ,$_POST['name']);
 $sec = mysqli_real_escape_string($conn,$_POST['secondname']);
