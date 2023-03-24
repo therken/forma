@@ -1,15 +1,28 @@
 <?php
 include 'settings.php';
 ///переменные
-$name = mysqli_real_escape_string($conn ,$_POST['name']);
-$sec = mysqli_real_escape_string($conn,$_POST['secondname']);
-$last = mysqli_real_escape_string($conn,$_POST['lastname']);
-$mail = mysqli_real_escape_string($conn,$_POST['mail']);
-$about = mysqli_real_escape_string($conn,$_POST['about']);
-$edate=strtotime($_POST['date']); 
-$edate=date("Y-m-d",$edate);
+function escapeInput($conn, $input) {
+    if(is_array($input)) {
+        foreach($input as $key => $value) {
+            $input[$key] = mysqli_real_escape_string($conn, $value);
+        }
+    } else {
+        $input = mysqli_real_escape_string($conn, $input);
+    }
+    return $input;
+}
+
+///переменные
+$name = escapeInput($conn, $_POST['name']);
+$sec = escapeInput($conn, $_POST['secondname']);
+$last = escapeInput($conn, $_POST['lastname']);
+$mail = escapeInput($conn, $_POST['mail']);
+$about = escapeInput($conn, $_POST['about']);
+$edate = strtotime($_POST['date']); 
+$edate = date("Y-m-d", $edate);
 $startDate = date('Y-m-d', strtotime("01/01/1900"));
 $endDate = date('Y-m-d', strtotime("01/10/2024"));
+
 
 ///проверка существования email-адреса
 $sql = "SELECT mail FROM user_form WHERE mail='$mail'";
