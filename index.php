@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -11,7 +9,7 @@
 
 </head>
 <body>
-<form action="profile.php" method="POST" enctype="multipart/form-data"  >
+<form id="form"action="profile.php" method="POST" enctype="multipart/form-data"  >
 <div class="wrapper">
 <!--image-->
 <div class="avatar-wrapper">
