@@ -39,22 +39,8 @@ $(document).ready(function(){
         });
     });
 });
-$(document).ready(function() {
-    $('textarea').on('input', function () {
-      this.style.height = 'auto';
-      this.style.height = (this.scrollHeight) + 'px';
-    });
-  });
   window.onload = function() {
-    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_RELOAD) {
-      var form = document.getElementById("form");
-      form.reset();
-      var images = document.getElementsByTagName("image");
-      for (var i = 0; i < images.length; i++) {
-        images[i].addEventListener("click", function() {
-          this.remove();
-        });
-      }
-    }
+    document.getElementById("form").reset();
   }
+  
   
