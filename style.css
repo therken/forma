@@ -55,11 +55,9 @@
 .avatar-wrapper .upload-button:hover  {
   opacity: 0.9;
 }
-
 body {
   background-color:#1b1919;
   font-family: 'Roboto', sans-serif;
-  
  }
  .wrapper {
   width: 300px;
